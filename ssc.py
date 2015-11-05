@@ -364,7 +364,7 @@ def signal_1buzhong(sorted_matched):
     """1不中后信号"""
     result = None
     values = [s[1] for s in sorted_matched]
-    if np.allclose(values[:3], [True, False, True]):
+    if np.allclose(values[:4], [True, False, True, False]):
         result = "1bz"
 
     return result
@@ -373,7 +373,7 @@ def signal_2buzhong(sorted_matched):
     """2不中后信号"""
     result = None
     values = [s[1] for s in sorted_matched]
-    if np.allclose(values[:4], [True, True, False, True]):
+    if np.allclose(values[:5], [True, True, False, True, False]):
         result = "2bz"
     return result
 

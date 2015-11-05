@@ -3859,3 +3859,2135 @@ INFO:root:检测１不中[None]
 INFO:root:检测２不中[None]
 INFO:root:全４中１后具体信号 [None]
 INFO:root:Error: <type 'exceptions.KeyboardInterrupt'>, in Line No 224
+INFO:root:Start Scc Monitoring at [2015-11-04T17:37:47.359510+08:00]
+INFO:root:Start to receiving subscription from SCC ingest process
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Login into WeChat
+INFO:root:Received update issue[151104065|3|8|7|3|9] at [2015-11-04T17:38:32.570006+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104065, 开奖号码: 38739
+信号 1: ２不中
+码信息
+十位: 落码(3) 杀码(2) 冷１码(2) 冷２码(8) 隔码(4) 传１码(2) 传２码(4) 
+个位: 落码(9) 杀码(0) 冷１码(2) 冷２码(3) 隔码(0) 传１码(8) 传２码(0) 
+ at [2015-11-04T17:38:32.690405+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104066|5|9|4|5|6] at [2015-11-04T17:38:35.160845+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104067|4|7|1|0|4] at [2015-11-04T17:38:35.212037+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104068|0|1|6|6|5] at [2015-11-04T17:38:35.258677+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104069|9|5|5|4|3] at [2015-11-04T17:38:35.305426+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104070|8|6|4|4|5] at [2015-11-04T17:38:35.352158+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Error: <type 'exceptions.KeyboardInterrupt'>, in Line No 224
+INFO:root:Start Scc Monitoring at [2015-11-04T17:39:36.307803+08:00]
+INFO:root:Start to receiving subscription from SCC ingest process
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Login into WeChat
+INFO:root:Received update issue[151104071|1|2|8|9|9] at [2015-11-04T17:47:49.203373+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:连续３次连３中１信号 011100110111010111
+INFO:root:检测连续３次连３中１后不中: [3l3z1]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104071, 开奖号码: 12899
+信号 1: 连续３次连３中１后
+码信息
+十位: 落码(9) 杀码(8) 冷１码(2) 冷２码(8) 隔码(4) 传１码(8) 传２码(0) 
+个位: 落码(9) 杀码(0) 冷１码(2) 冷２码(7) 隔码(5) 传１码(8) 传２码(0) 
+ at [2015-11-04T17:47:49.322417+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104072|7|1|0|7|8] at [2015-11-04T17:57:33.517631+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104073|1|2|9|2|9] at [2015-11-04T18:07:48.349672+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104074|9|7|1|9|5] at [2015-11-04T18:17:33.919331+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104075|4|2|2|1|6] at [2015-11-04T18:27:50.888622+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104075, 开奖号码: 42216
+信号 1: １不中
+码信息
+十位: 落码(1) 杀码(0) 冷１码(8) 冷２码(3) 隔码(9) 传１码(0) 传２码(2) 
+个位: 落码(6) 杀码(1) 冷１码(2) 冷２码(7) 隔码(5) 传１码(5) 传２码(7) 
+ at [2015-11-04T18:27:50.941381+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104076|0|5|2|5|3] at [2015-11-04T18:38:08.647822+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104077|3|8|4|1|0] at [2015-11-04T18:59:16.567739+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104078|6|6|9|9|7] at [2015-11-04T18:59:16.617261+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104079|8|4|2|1|1] at [2015-11-04T19:07:38.374938+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104080|5|0|6|1|3] at [2015-11-04T19:17:53.766453+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104081|9|7|8|3|4] at [2015-11-04T19:27:38.776176+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104082|3|0|4|4|0] at [2015-11-04T19:37:55.771861+08:00]
+INFO:root:连续３次连４中１信号 011110010100111001101110101110010111101111
+INFO:root:检测连续３次连４中１后不中: [3l4z1]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104082, 开奖号码: 30440
+信号 1: 连续３次连４中１后
+信号 2: 连４中１
+码信息
+十位: 落码(4) 杀码(3) 冷１码(8) 冷２码(0) 隔码(3) 传１码(3) 传２码(5) 
+个位: 落码(0) 杀码(3) 冷１码(2) 冷２码(8) 隔码(4) 传１码(9) 传２码(1) 
+ at [2015-11-04T19:37:55.823200+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104083|2|9|5|7|7] at [2015-11-04T19:47:44.151293+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104084|3|6|6|2|0] at [2015-11-04T19:59:37.536777+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104085|2|5|9|5|6] at [2015-11-04T20:07:53.837609+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104086|6|6|3|0|7] at [2015-11-04T20:17:36.918562+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104087|3|6|1|6|8] at [2015-11-04T20:28:01.313606+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104088|9|1|4|3|5] at [2015-11-04T20:38:39.116416+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104089|8|9|7|9|3] at [2015-11-04T20:49:02.639371+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104089, 开奖号码: 89793
+信号 1: １不中
+码信息
+十位: 落码(9) 杀码(8) 冷１码(8) 冷２码(1) 隔码(3) 传１码(8) 传２码(0) 
+个位: 落码(3) 杀码(2) 冷１码(2) 冷２码(9) 隔码(5) 传１码(2) 传２码(4) 
+ at [2015-11-04T20:49:02.692416+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104090|8|7|4|3|2] at [2015-11-04T20:57:50.458137+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104090, 开奖号码: 87432
+信号 1: ２不中
+码信息
+十位: 落码(3) 杀码(2) 冷１码(8) 冷２码(1) 隔码(9) 传１码(2) 传２码(4) 
+个位: 落码(2) 杀码(9) 冷１码(9) 冷２码(1) 隔码(3) 传１码(1) 传２码(3) 
+ at [2015-11-04T20:57:50.511718+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104091|6|1|0|9|6] at [2015-11-04T21:07:43.478206+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104092|1|8|0|1|5] at [2015-11-04T21:17:30.272265+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104092, 开奖号码: 18015
+信号 1: １不中
+码信息
+十位: 落码(1) 杀码(0) 冷１码(8) 冷２码(4) 隔码(9) 传１码(0) 传２码(2) 
+个位: 落码(5) 杀码(8) 冷１码(9) 冷２码(1) 隔码(6) 传１码(4) 传２码(6) 
+ at [2015-11-04T21:17:30.374360+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104093|4|3|2|5|8] at [2015-11-04T21:29:27.284331+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104093, 开奖号码: 43258
+信号 1: ２不中
+码信息
+十位: 落码(5) 杀码(4) 冷１码(8) 冷２码(4) 隔码(1) 传１码(4) 传２码(6) 
+个位: 落码(8) 杀码(7) 冷１码(9) 冷２码(1) 隔码(5) 传１码(7) 传２码(9) 
+ at [2015-11-04T21:29:27.337752+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104094|1|2|4|6|0] at [2015-11-04T21:37:47.488042+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104095|1|6|2|4|7] at [2015-11-04T21:47:40.132169+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104095, 开奖号码: 16247
+信号 1: １不中
+码信息
+十位: 落码(4) 杀码(3) 冷１码(8) 冷２码(7) 隔码(6) 传１码(3) 传２码(5) 
+个位: 落码(7) 杀码(4) 冷１码(9) 冷２码(1) 隔码(0) 传１码(6) 传２码(8) 
+ at [2015-11-04T21:47:40.183768+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104096|2|0|7|4|6] at [2015-11-04T21:57:36.897885+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104096, 开奖号码: 20746
+信号 1: ２不中
+码信息
+十位: 落码(4) 杀码(3) 冷１码(8) 冷２码(7) 隔码(4) 传１码(3) 传２码(5) 
+个位: 落码(6) 杀码(1) 冷１码(9) 冷２码(1) 隔码(7) 传１码(5) 传２码(7) 
+ at [2015-11-04T21:57:36.954338+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104097|4|5|4|9|3] at [2015-11-04T22:02:46.484650+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104098|1|0|9|0|4] at [2015-11-04T22:07:54.448055+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104099|9|0|1|8|2] at [2015-11-04T22:12:35.742730+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104100|6|4|7|8|0] at [2015-11-04T22:17:49.042014+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104101|1|9|3|5|1] at [2015-11-04T22:22:55.627864+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104102|3|3|7|6|1] at [2015-11-04T22:29:27.932437+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104103|1|0|0|0|4] at [2015-11-04T22:32:40.500331+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104103, 开奖号码: 10004
+信号 1: 连４中１
+码信息
+十位: 落码(0) 杀码(9) 冷１码(7) 冷２码(2) 隔码(6) 传１码(9) 传２码(1) 
+个位: 落码(4) 杀码(5) 冷１码(9) 冷２码(5) 隔码(1) 传１码(3) 传２码(5) 
+ at [2015-11-04T22:32:40.549623+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104104|3|2|7|9|7] at [2015-11-04T22:38:17.278886+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [q4z1h|5-2]
+INFO:root:收到信号: 当前期数:151104104, 开奖号码: 32797
+信号 1: １不中
+信号 2: 全４中１后_5-2
+码信息
+十位: 落码(9) 杀码(8) 冷１码(7) 冷２码(2) 隔码(0) 传１码(8) 传２码(0) 
+个位: 落码(7) 杀码(4) 冷１码(9) 冷２码(5) 隔码(4) 传１码(6) 传２码(8) 
+ at [2015-11-04T22:38:17.330354+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104105|0|3|1|6|9] at [2015-11-04T23:37:31.944580+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, True, False, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|4-3]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104105, 开奖号码: 03169
+信号 1: 连４中１后_4-3
+信号 2: ２不中
+码信息
+十位: 落码(6) 杀码(5) 冷１码(7) 冷２码(2) 隔码(9) 传１码(5) 传２码(7) 
+个位: 落码(9) 杀码(0) 冷１码(5) 冷２码(8) 隔码(7) 传１码(8) 传２码(0) 
+ at [2015-11-04T23:37:31.996271+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104106|7|1|6|0|3] at [2015-11-04T23:37:36.847577+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104107|5|6|3|7|3] at [2015-11-04T23:37:36.899834+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104107, 开奖号码: 56373
+信号 1: １不中
+码信息
+十位: 落码(7) 杀码(6) 冷１码(2) 冷２码(3) 隔码(0) 传１码(6) 传２码(8) 
+个位: 落码(3) 杀码(2) 冷１码(5) 冷２码(8) 隔码(3) 传１码(2) 传２码(4) 
+ at [2015-11-04T23:37:37.020362+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104108|9|2|4|4|4] at [2015-11-04T23:37:41.755653+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104109|0|2|2|9|9] at [2015-11-04T23:37:41.806400+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104110|5|2|3|9|7] at [2015-11-04T23:37:41.853108+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104111|1|6|4|1|1] at [2015-11-04T23:37:41.899709+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104112|3|5|5|8|4] at [2015-11-04T23:37:41.946749+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104113|4|6|9|7|5] at [2015-11-04T23:37:42.042710+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104114|2|8|3|3|0] at [2015-11-04T23:37:42.089874+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104115|4|5|0|3|6] at [2015-11-04T23:37:42.137482+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104116|6|6|8|8|2] at [2015-11-04T23:37:42.184092+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104117|6|7|6|6|9] at [2015-11-04T23:42:40.898597+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151104118|7|5|9|7|6] at [2015-11-04T23:47:48.678304+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:连４中１后具体信号 [False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-1]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104118, 开奖号码: 75976
+信号 1: 连４中１
+信号 2: 连４中１后_5-1
+码信息
+十位: 落码(7) 杀码(6) 冷１码(2) 冷２码(5) 隔码(6) 传１码(6) 传２码(8) 
+个位: 落码(6) 杀码(1) 冷１码(8) 冷２码(3) 隔码(9) 传１码(5) 传２码(7) 
+ at [2015-11-04T23:47:48.730485+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104119|6|5|1|0|6] at [2015-11-04T23:52:57.777436+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-2]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104119, 开奖号码: 65106
+信号 1: 连４中１后_5-2
+信号 2: １不中
+码信息
+十位: 落码(0) 杀码(9) 冷１码(2) 冷２码(5) 隔码(7) 传１码(9) 传２码(1) 
+个位: 落码(6) 杀码(1) 冷１码(8) 冷２码(3) 隔码(6) 传１码(5) 传２码(7) 
+ at [2015-11-04T23:52:57.830205+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151104120|7|4|0|9|5] at [2015-11-04T23:57:38.806236+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, True, False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-3]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151104120, 开奖号码: 74095
+信号 1: 连４中１后_5-3
+信号 2: ２不中
+码信息
+十位: 落码(9) 杀码(8) 冷１码(2) 冷２码(5) 隔码(0) 传１码(8) 传２码(0) 
+个位: 落码(5) 杀码(8) 冷１码(8) 冷２码(3) 隔码(6) 传１码(4) 传２码(6) 
+ at [2015-11-04T23:57:38.858976+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105001|3|0|1|5|0] at [2015-11-05T00:02:51.255651+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105002|8|3|5|9|7] at [2015-11-05T00:07:28.209557+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105003|0|7|5|2|4] at [2015-11-05T00:12:36.830893+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105003, 开奖号码: 07524
+信号 1: １不中
+码信息
+十位: 落码(2) 杀码(1) 冷１码(4) 冷２码(1) 隔码(9) 传１码(1) 传２码(3) 
+个位: 落码(4) 杀码(5) 冷１码(8) 冷２码(3) 隔码(7) 传１码(3) 传２码(5) 
+ at [2015-11-05T00:12:36.883616+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105004|2|6|8|3|3] at [2015-11-05T00:17:44.457171+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105004, 开奖号码: 26833
+信号 1: ２不中
+码信息
+十位: 落码(3) 杀码(2) 冷１码(4) 冷２码(1) 隔码(2) 传１码(2) 传２码(4) 
+个位: 落码(3) 杀码(2) 冷１码(8) 冷２码(1) 隔码(4) 传１码(2) 传２码(4) 
+ at [2015-11-05T00:17:44.509498+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105005|5|9|2|4|8] at [2015-11-05T00:22:54.028876+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105006|4|1|1|9|6] at [2015-11-05T00:27:31.486524+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105007|9|4|3|3|8] at [2015-11-05T00:32:39.724757+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105008|0|7|4|5|8] at [2015-11-05T00:50:09.956166+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105009|0|5|6|6|2] at [2015-11-05T00:50:10.065125+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105010|1|4|8|1|9] at [2015-11-05T00:50:10.111532+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105011|5|4|3|0|1] at [2015-11-05T00:52:43.200103+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105012|6|8|4|0|7] at [2015-11-05T00:57:28.876647+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105013|3|8|1|6|8] at [2015-11-05T01:02:56.761412+08:00]
+INFO:root:连续３次连４中１信号 01111100111011101111100100101101111
+INFO:root:检测连续３次连４中１后不中: [3l4z1]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:连４中１后具体信号 [False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-1]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105013, 开奖号码: 38168
+信号 1: 连续３次连４中１后
+信号 2: 连４中１
+信号 3: 连４中１后_5-1
+码信息
+十位: 落码(6) 杀码(5) 冷１码(8) 冷２码(7) 隔码(0) 传１码(5) 传２码(7) 
+个位: 落码(8) 杀码(7) 冷１码(5) 冷２码(0) 隔码(7) 传１码(7) 传２码(9) 
+ at [2015-11-05T01:02:56.859805+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105014|9|5|6|2|4] at [2015-11-05T01:07:36.836039+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105015|7|8|3|3|0] at [2015-11-05T01:29:02.965866+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105016|7|4|8|0|9] at [2015-11-05T01:29:03.018495+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105017|0|6|1|5|5] at [2015-11-05T01:29:03.065735+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105017, 开奖号码: 06155
+信号 1: １不中
+码信息
+十位: 落码(5) 杀码(4) 冷１码(8) 冷２码(7) 隔码(0) 传１码(4) 传２码(6) 
+个位: 落码(5) 杀码(8) 冷１码(3) 冷２码(6) 隔码(9) 传１码(4) 传２码(6) 
+ at [2015-11-05T01:29:03.112576+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105018|0|1|2|2|8] at [2015-11-05T01:29:07.774978+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105018, 开奖号码: 01228
+信号 1: ２不中
+码信息
+十位: 落码(2) 杀码(1) 冷１码(8) 冷２码(7) 隔码(5) 传１码(1) 传２码(3) 
+个位: 落码(8) 杀码(7) 冷１码(3) 冷２码(6) 隔码(5) 传１码(7) 传２码(9) 
+ at [2015-11-05T01:29:07.890176+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105019|1|1|6|5|8] at [2015-11-05T01:32:37.074321+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105020|8|4|3|6|5] at [2015-11-05T01:37:43.524158+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105021|6|4|4|4|8] at [2015-11-05T01:42:50.019426+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105021, 开奖号码: 64448
+信号 1: １不中
+码信息
+十位: 落码(4) 杀码(3) 冷１码(8) 冷２码(7) 隔码(6) 传１码(3) 传２码(5) 
+个位: 落码(8) 杀码(7) 冷１码(3) 冷２码(6) 隔码(5) 传１码(7) 传２码(9) 
+ at [2015-11-05T01:42:50.071684+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105022|0|2|1|4|5] at [2015-11-05T01:47:56.320722+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105022, 开奖号码: 02145
+信号 1: ２不中
+码信息
+十位: 落码(4) 杀码(3) 冷１码(8) 冷２码(7) 隔码(4) 传１码(3) 传２码(5) 
+个位: 落码(5) 杀码(8) 冷１码(3) 冷２码(6) 隔码(8) 传１码(4) 传２码(6) 
+ at [2015-11-05T01:47:56.378837+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105023|9|1|0|6|4] at [2015-11-05T01:52:36.115941+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Error: <type 'exceptions.KeyboardInterrupt'>, in Line No 224
+INFO:root:Start Scc Monitoring at [2015-11-05T04:50:31.619887+08:00]
+INFO:root:Start Scc Monitoring at [2015-11-05T04:51:59.193368+08:00]
+INFO:root:Start to receiving subscription from SCC ingest process
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Login into WeChat
+INFO:root:Received update issue[151105024|6|3|9|3|0] at [2015-11-05T09:57:45.511891+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105025|2|2|2|9|0] at [2015-11-05T10:07:51.576071+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105026|9|6|7|7|6] at [2015-11-05T10:17:32.960824+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105027|1|4|0|4|5] at [2015-11-05T10:27:49.934800+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105028|3|3|1|3|2] at [2015-11-05T10:37:34.848947+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105029|9|4|3|2|6] at [2015-11-05T11:02:50.331208+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105030|5|8|5|8|2] at [2015-11-05T11:02:50.459577+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105031|6|9|1|2|6] at [2015-11-05T11:19:59.445200+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105032|2|4|8|7|4] at [2015-11-05T11:19:59.497548+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105033|1|6|0|2|0] at [2015-11-05T11:27:47.708238+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [q4z1h|5-2]
+INFO:root:收到信号: 当前期数:151105033, 开奖号码: 16020
+信号 1: 全４中１后_5-2
+码信息
+十位: 落码(2) 杀码(1) 冷１码(1) 冷２码(0) 隔码(7) 传１码(1) 传２码(3) 
+个位: 落码(0) 杀码(3) 冷１码(3) 冷２码(1) 隔码(4) 传１码(9) 传２码(1) 
+ at [2015-11-05T11:27:47.760493+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105034|3|9|5|0|6] at [2015-11-05T11:37:59.593789+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105035|0|2|7|0|3] at [2015-11-05T11:47:46.445385+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105036|0|4|5|9|6] at [2015-11-05T11:57:33.024902+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105037|1|4|2|3|6] at [2015-11-05T12:07:27.080898+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105038|3|2|0|2|0] at [2015-11-05T12:17:49.628336+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105039|8|7|0|6|7] at [2015-11-05T12:27:39.480290+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105040|3|8|1|3|6] at [2015-11-05T12:37:53.028374+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:连４中１后具体信号 [False, True, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|6-1]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105040, 开奖号码: 38136
+信号 1: 连４中１
+信号 2: 连４中１后_6-1
+码信息
+十位: 落码(3) 杀码(2) 冷１码(1) 冷２码(5) 隔码(6) 传１码(2) 传２码(4) 
+个位: 落码(6) 杀码(1) 冷１码(1) 冷２码(9) 隔码(7) 传１码(5) 传２码(7) 
+ at [2015-11-05T12:37:53.145927+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105041|1|0|0|6|0] at [2015-11-05T12:47:54.029771+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105042|7|5|5|4|5] at [2015-11-05T12:57:51.261035+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105043|2|8|6|7|2] at [2015-11-05T13:09:50.836771+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105044|4|4|6|1|5] at [2015-11-05T13:17:48.512056+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105045|9|1|5|1|5] at [2015-11-05T13:27:18.794717+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105046|5|2|6|5|9] at [2015-11-05T13:37:34.572024+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105047|0|3|7|8|5] at [2015-11-05T13:47:49.162943+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105048|4|1|0|0|0] at [2015-11-05T13:58:15.456471+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105049|4|7|4|9|1] at [2015-11-05T14:10:10.200291+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105050|6|9|7|5|2] at [2015-11-05T14:17:54.519752+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:连４中１后具体信号 [False, True, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|6-1]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105050, 开奖号码: 69752
+信号 1: 连４中１
+信号 2: 连４中１后_6-1
+码信息
+十位: 落码(5) 杀码(4) 冷１码(2) 冷２码(3) 隔码(9) 传１码(4) 传２码(6) 
+个位: 落码(2) 杀码(9) 冷１码(8) 冷２码(4) 隔码(1) 传１码(1) 传２码(3) 
+ at [2015-11-05T14:17:54.636925+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105051|3|0|3|5|5] at [2015-11-05T14:27:40.137202+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:连续４天出现连４中１后不中 ['151105051', '151104119', '151103110', '151102106']
+INFO:root:检测连续４天出现连４中１后不中: [4day_l4z1hbz]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105051, 开奖号码: 30355
+信号 1: 连续４天出现连４中１后不中
+码信息
+十位: 落码(5) 杀码(4) 冷１码(2) 冷２码(3) 隔码(5) 传１码(4) 传２码(6) 
+个位: 落码(5) 杀码(8) 冷１码(8) 冷２码(4) 隔码(2) 传１码(4) 传２码(6) 
+ at [2015-11-05T14:27:40.189648+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105052|0|5|1|4|3] at [2015-11-05T14:37:28.640063+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, True, False, True, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|6-3]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105052, 开奖号码: 05143
+信号 1: 连４中１后_6-3
+码信息
+十位: 落码(4) 杀码(3) 冷１码(2) 冷２码(3) 隔码(5) 传１码(3) 传２码(5) 
+个位: 落码(3) 杀码(2) 冷１码(8) 冷２码(4) 隔码(5) 传１码(2) 传２码(4) 
+ at [2015-11-05T14:37:28.690988+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105053|5|7|4|2|9] at [2015-11-05T14:47:25.285031+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105054|5|7|5|7|4] at [2015-11-05T14:58:26.825593+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105055|7|2|5|5|5] at [2015-11-05T15:07:27.239384+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105056|7|6|4|0|0] at [2015-11-05T15:17:43.246634+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:连４中１后具体信号 [False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-1]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105056, 开奖号码: 76400
+信号 1: 连４中１
+信号 2: 连４中１后_5-1
+码信息
+十位: 落码(0) 杀码(9) 冷１码(3) 冷２码(6) 隔码(5) 传１码(9) 传２码(1) 
+个位: 落码(0) 杀码(3) 冷１码(8) 冷２码(7) 隔码(5) 传１码(9) 传２码(1) 
+ at [2015-11-05T15:17:43.299679+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105057|6|2|6|1|8] at [2015-11-05T15:27:29.039167+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-2]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105057, 开奖号码: 62618
+信号 1: 连４中１后_5-2
+码信息
+十位: 落码(1) 杀码(0) 冷１码(3) 冷２码(6) 隔码(0) 传１码(0) 传２码(2) 
+个位: 落码(8) 杀码(7) 冷１码(7) 冷２码(6) 隔码(0) 传１码(7) 传２码(9) 
+ at [2015-11-05T15:27:29.094096+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105058|6|1|0|3|8] at [2015-11-05T15:37:18.389296+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, True, False, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|5-3]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105058, 开奖号码: 61038
+信号 1: 连４中１后_5-3
+码信息
+十位: 落码(3) 杀码(2) 冷１码(6) 冷２码(8) 隔码(1) 传１码(2) 传２码(4) 
+个位: 落码(8) 杀码(7) 冷１码(7) 冷２码(6) 隔码(8) 传１码(7) 传２码(9) 
+ at [2015-11-05T15:37:18.443032+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105059|2|7|8|7|5] at [2015-11-05T15:47:40.502777+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105060|5|9|5|6|4] at [2015-11-05T15:59:27.652369+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105061|5|1|9|5|3] at [2015-11-05T16:07:47.692440+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105062|0|7|7|8|6] at [2015-11-05T16:17:58.092764+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105063|1|5|5|9|1] at [2015-11-05T16:27:24.704164+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105064|8|7|6|5|6] at [2015-11-05T16:38:29.144445+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105065|6|0|1|0|1] at [2015-11-05T16:48:49.484135+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105066|0|9|5|2|3] at [2015-11-05T16:59:48.290193+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105067|6|5|1|1|2] at [2015-11-05T17:07:32.396136+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105068|7|5|3|8|8] at [2015-11-05T17:17:47.907028+08:00]
+INFO:root:连续３次连４中１信号 0111111110110111110111111
+INFO:root:检测连续３次连４中１后不中: [3l4z1]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105068, 开奖号码: 75388
+信号 1: 连续３次连４中１后
+信号 2: 连４中１
+码信息
+十位: 落码(8) 杀码(7) 冷１码(4) 冷２码(3) 隔码(1) 传１码(7) 传２码(9) 
+个位: 落码(8) 杀码(7) 冷１码(7) 冷２码(9) 隔码(2) 传１码(7) 传２码(9) 
+ at [2015-11-05T17:17:47.957762+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105069|0|7|2|1|6] at [2015-11-05T17:27:39.554565+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105070|6|4|9|0|3] at [2015-11-05T17:37:35.980782+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105071|7|6|8|5|1] at [2015-11-05T17:47:53.850828+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105072|4|0|9|3|9] at [2015-11-05T17:57:46.623623+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105073|0|0|5|1|8] at [2015-11-05T18:09:15.612272+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105074|3|5|1|7|8] at [2015-11-05T18:17:48.764322+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105075|0|0|2|6|0] at [2015-11-05T18:27:36.850465+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105076|9|8|0|4|2] at [2015-11-05T18:37:27.942885+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105077|5|5|8|2|2] at [2015-11-05T18:47:47.392200+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105078|2|5|4|7|1] at [2015-11-05T18:57:36.286347+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105078, 开奖号码: 25471
+信号 1: 连４中１
+码信息
+十位: 落码(7) 杀码(6) 冷１码(9) 冷２码(8) 隔码(2) 传１码(6) 传２码(8) 
+个位: 落码(1) 杀码(6) 冷１码(7) 冷２码(5) 隔码(2) 传１码(0) 传２码(2) 
+ at [2015-11-05T18:57:36.336793+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105079|1|5|9|5|2] at [2015-11-05T19:07:37.300886+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105080|8|5|2|0|6] at [2015-11-05T19:32:30.713669+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105081|8|8|8|6|5] at [2015-11-05T19:32:30.849905+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105082|5|2|0|2|9] at [2015-11-05T19:37:55.246061+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105083|3|2|9|4|6] at [2015-11-05T19:47:33.918353+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105084|7|8|7|4|8] at [2015-11-05T19:57:25.705800+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105085|0|5|0|9|4] at [2015-11-05T20:07:49.240487+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105086|8|6|5|4|5] at [2015-11-05T20:17:35.298735+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105087|3|2|8|7|1] at [2015-11-05T20:27:35.390878+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105088|4|2|1|8|2] at [2015-11-05T20:39:11.173730+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105089|5|9|1|8|7] at [2015-11-05T20:47:43.356545+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105090|5|8|9|0|1] at [2015-11-05T20:57:30.988001+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105091|8|3|6|1|2] at [2015-11-05T21:07:48.522842+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105092|1|8|4|9|3] at [2015-11-05T21:17:35.383548+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105093|3|1|4|5|2] at [2015-11-05T21:27:58.092998+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105094|0|6|4|0|5] at [2015-11-05T21:37:27.395215+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105095|5|4|9|6|3] at [2015-11-05T21:47:51.624751+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105096|7|0|0|1|9] at [2015-11-05T21:57:47.930122+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105097|4|6|0|7|0] at [2015-11-05T22:02:29.126712+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105098|8|7|4|9|0] at [2015-11-05T22:07:47.220223+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105099|8|5|4|5|7] at [2015-11-05T22:12:33.109733+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105099, 开奖号码: 85457
+信号 1: 连４中１
+码信息
+十位: 落码(5) 杀码(4) 冷１码(3) 冷２码(2) 隔码(9) 传１码(4) 传２码(6) 
+个位: 落码(7) 杀码(4) 冷１码(6) 冷２码(8) 隔码(0) 传１码(6) 传２码(8) 
+ at [2015-11-05T22:12:33.162635+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105100|3|0|1|7|6] at [2015-11-05T22:17:43.138450+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [q4z1h|5-2]
+INFO:root:收到信号: 当前期数:151105100, 开奖号码: 30176
+信号 1: 全４中１后_5-2
+码信息
+十位: 落码(7) 杀码(6) 冷１码(3) 冷２码(2) 隔码(5) 传１码(6) 传２码(8) 
+个位: 落码(6) 杀码(1) 冷１码(8) 冷２码(4) 隔码(7) 传１码(5) 传２码(7) 
+ at [2015-11-05T22:17:43.192486+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105101|0|5|7|7|3] at [2015-11-05T22:22:22.963230+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:连４中１后具体信号 [True, True, False, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|4-3]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105101, 开奖号码: 05773
+信号 1: 连４中１后_4-3
+码信息
+十位: 落码(7) 杀码(6) 冷１码(3) 冷２码(2) 隔码(7) 传１码(6) 传２码(8) 
+个位: 落码(3) 杀码(2) 冷１码(8) 冷２码(4) 隔码(6) 传１码(2) 传２码(4) 
+ at [2015-11-05T22:22:23.126284+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105102|2|9|5|0|3] at [2015-11-05T22:27:35.164061+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105103|7|3|8|4|4] at [2015-11-05T22:32:51.798683+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105104|9|7|1|1|3] at [2015-11-05T22:37:34.055022+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105104, 开奖号码: 97113
+信号 1: 连４中１
+码信息
+十位: 落码(1) 杀码(0) 冷１码(3) 冷２码(2) 隔码(4) 传１码(0) 传２码(2) 
+个位: 落码(3) 杀码(2) 冷１码(8) 冷２码(1) 隔码(4) 传１码(2) 传２码(4) 
+ at [2015-11-05T22:37:34.107162+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105105|5|9|5|5|9] at [2015-11-05T22:42:48.499935+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105106|8|0|9|5|4] at [2015-11-05T22:47:34.580206+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [q4z1h|5-2]
+INFO:root:收到信号: 当前期数:151105106, 开奖号码: 80954
+信号 1: 全４中１后_5-2
+码信息
+十位: 落码(5) 杀码(4) 冷１码(3) 冷２码(2) 隔码(5) 传１码(4) 传２码(6) 
+个位: 落码(4) 杀码(5) 冷１码(8) 冷２码(1) 隔码(9) 传１码(3) 传２码(5) 
+ at [2015-11-05T22:47:34.718521+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:retry logining to Wechat
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105107|8|8|4|5|2] at [2015-11-05T22:52:44.602071+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105108|0|1|0|5|2] at [2015-11-05T22:57:57.305639+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105109|6|2|7|0|7] at [2015-11-05T23:02:37.399574+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Error: <type 'exceptions.KeyboardInterrupt'>, in Line No 224
+INFO:root:Start Scc Monitoring at [2015-11-05T23:07:15.270740+08:00]
+INFO:root:Start to receiving subscription from SCC ingest process
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Login into WeChat
+INFO:root:Received update issue[151105110|2|9|0|8|3] at [2015-11-05T23:19:47.307746+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105111|6|6|1|6|5] at [2015-11-05T23:19:47.440371+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105112|6|9|1|5|4] at [2015-11-05T23:19:47.487368+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105113|0|7|5|6|3] at [2015-11-05T23:22:51.991369+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105114|6|7|2|0|2] at [2015-11-05T23:27:29.055201+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105114, 开奖号码: 67202
+信号 1: １不中
+码信息
+十位: 落码(0) 杀码(9) 冷１码(3) 冷２码(2) 隔码(6) 传１码(9) 传２码(1) 
+个位: 落码(2) 杀码(9) 冷１码(8) 冷２码(1) 隔码(3) 传１码(1) 传２码(3) 
+ at [2015-11-05T23:27:29.110352+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105115|7|8|7|9|4] at [2015-11-05T23:32:38.113014+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105115, 开奖号码: 78794
+信号 1: ２不中
+码信息
+十位: 落码(9) 杀码(8) 冷１码(3) 冷２码(2) 隔码(0) 传１码(8) 传２码(0) 
+个位: 落码(4) 杀码(5) 冷１码(8) 冷２码(1) 隔码(2) 传１码(3) 传２码(5) 
+ at [2015-11-05T23:32:38.229502+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105116|1|3|9|6|5] at [2015-11-05T23:37:51.578441+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105117|6|9|8|5|4] at [2015-11-05T23:42:32.814744+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105118|2|8|8|7|7] at [2015-11-05T23:48:27.678912+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151105118, 开奖号码: 28877
+信号 1: 连４中１
+码信息
+十位: 落码(7) 杀码(6) 冷１码(3) 冷２码(2) 隔码(5) 传１码(6) 传２码(8) 
+个位: 落码(7) 杀码(4) 冷１码(8) 冷２码(1) 隔码(4) 传１码(6) 传２码(8) 
+ at [2015-11-05T23:48:27.733661+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151105119|0|8|9|0|2] at [2015-11-05T23:52:38.378181+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151105120|7|2|2|2|4] at [2015-11-06T00:04:02.913834+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106001|7|9|6|0|4] at [2015-11-06T00:04:03.026005+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106002|4|9|6|7|0] at [2015-11-06T00:07:24.448974+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106003|0|0|5|1|2] at [2015-11-06T00:12:33.048108+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106004|9|7|7|0|5] at [2015-11-06T00:17:46.419894+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106005|9|5|9|7|0] at [2015-11-06T00:22:26.708278+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106006|7|9|5|4|0] at [2015-11-06T00:27:39.042876+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106006, 开奖号码: 79540
+信号 1: １不中
+码信息
+十位: 落码(4) 杀码(3) 冷１码(3) 冷２码(8) 隔码(7) 传１码(3) 传２码(5) 
+个位: 落码(0) 杀码(3) 冷１码(8) 冷２码(1) 隔码(0) 传１码(9) 传２码(1) 
+ at [2015-11-06T00:27:39.093897+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151106007|4|2|6|3|8] at [2015-11-06T00:32:49.209236+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106007, 开奖号码: 42638
+信号 1: ２不中
+码信息
+十位: 落码(3) 杀码(2) 冷１码(8) 冷２码(9) 隔码(4) 传１码(2) 传２码(4) 
+个位: 落码(8) 杀码(7) 冷１码(1) 冷２码(6) 隔码(0) 传１码(7) 传２码(9) 
+ at [2015-11-06T00:32:49.263826+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151106008|6|5|8|3|5] at [2015-11-06T00:37:30.347319+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106009|5|6|4|1|0] at [2015-11-06T00:42:38.559906+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106010|4|5|7|6|8] at [2015-11-06T00:47:51.035963+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106011|3|1|9|4|1] at [2015-11-06T00:52:27.033070+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106012|8|5|0|7|3] at [2015-11-06T00:57:38.446318+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106013|4|6|8|8|8] at [2015-11-06T01:02:47.913962+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106013, 开奖号码: 46888
+信号 1: １不中
+码信息
+十位: 落码(8) 杀码(7) 冷１码(9) 冷２码(5) 隔码(7) 传１码(7) 传２码(9) 
+个位: 落码(8) 杀码(7) 冷１码(6) 冷２码(9) 隔码(3) 传１码(7) 传２码(9) 
+ at [2015-11-06T01:02:47.967442+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151106014|3|5|0|0|2] at [2015-11-06T01:07:25.918457+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106015|5|5|4|3|2] at [2015-11-06T01:12:44.288029+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106015, 开奖号码: 55432
+信号 1: １不中
+码信息
+十位: 落码(3) 杀码(2) 冷１码(9) 冷２码(5) 隔码(0) 传１码(2) 传２码(4) 
+个位: 落码(2) 杀码(9) 冷１码(6) 冷２码(9) 隔码(2) 传１码(1) 传２码(3) 
+ at [2015-11-06T01:12:44.342762+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151106016|3|2|7|7|0] at [2015-11-06T01:18:25.704214+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106017|5|1|4|5|0] at [2015-11-06T01:22:35.491825+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[1bz]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106017, 开奖号码: 51450
+信号 1: １不中
+码信息
+十位: 落码(5) 杀码(4) 冷１码(9) 冷２码(2) 隔码(7) 传１码(4) 传２码(6) 
+个位: 落码(0) 杀码(3) 冷１码(6) 冷２码(9) 隔码(0) 传１码(9) 传２码(1) 
+ at [2015-11-06T01:22:35.546739+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151106018|3|3|6|2|3] at [2015-11-06T01:27:41.322541+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[2bz]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106018, 开奖号码: 33623
+信号 1: ２不中
+码信息
+十位: 落码(2) 杀码(1) 冷１码(9) 冷２码(1) 隔码(5) 传１码(1) 传２码(3) 
+个位: 落码(3) 杀码(2) 冷１码(6) 冷２码(9) 隔码(0) 传１码(2) 传２码(4) 
+ at [2015-11-06T01:27:41.378468+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:root:Received update issue[151106019|0|4|8|9|2] at [2015-11-06T01:32:47.717989+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106020|5|8|6|6|2] at [2015-11-06T01:37:22.978857+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106021|5|4|1|5|2] at [2015-11-06T01:42:28.704612+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106022|0|6|8|5|1] at [2015-11-06T01:47:34.481759+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:检测连４中１: [None]
+INFO:root:检测连４中１后:[None]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:Received update issue[151106023|6|0|7|7|8] at [2015-11-06T01:52:47.654350+08:00]
+INFO:root:检测连续３次连４中１后不中: [None]
+INFO:root:检测连续３次连３中１后不中: [None]
+INFO:root:检测连续４天出现连４中１后不中: [None]
+INFO:root:连４中１信号 [False, True, True, True, True, True, True, False] 
+INFO:root:检测连４中１: [l4z1]
+INFO:root:连４中１后具体信号 [False, True, True, True, True, True, True, False]
+INFO:root:检测连４中１后:[l4z1h|6-1]
+INFO:root:检测１不中[None]
+INFO:root:检测２不中[None]
+INFO:root:全４中１后具体信号 [None]
+INFO:root:收到信号: 当前期数:151106023, 开奖号码: 60778
+信号 1: 连４中１
+信号 2: 连４中１后_6-1
+码信息
+十位: 落码(7) 杀码(6) 冷１码(1) 冷２码(4) 隔码(5) 传１码(6) 传２码(8) 
+个位: 落码(8) 杀码(7) 冷１码(6) 冷２码(9) 隔码(1) 传１码(7) 传２码(9) 
+ at [2015-11-06T01:52:47.709353+08:00]
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): mp.weixin.qq.com

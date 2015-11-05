@@ -67,9 +67,14 @@ def run():
                 logging.info(message)
 
                 time.sleep(30)
-        except:
+        except KeyboardInterrupt:
+            now = datetime.now(tz)
+            message = "CTRL-C to quit the program at [%s]" % now.isoformat()
+            logging.info(message)
+            break
+        except Exception as e:
             error_message = sys.exc_info()[0]
-            logging.info(error_message)
+            logging.info(e)
 
 if __name__ == "__main__":
     run()
