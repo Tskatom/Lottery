@@ -46,8 +46,10 @@ def send_message(wechat, message):
                 uid = u["id"]
                 wechat.send_message(uid, message)
             done = True
-        except:
+        except Exception as e:
             logging.info("retry logining to Wechat")
+            logging.info(e)
+            time.sleep(1)
             wechat = wechat_login()
 
 
@@ -148,7 +150,7 @@ def initiate_codes(lottery_file):
         prev_code = codes[prev_id]
         flag, full_flag = update_match(lottery[issue], prev_code)
         matched[issue] = flag
-        full_matched[issue] = flag
+        full_matched[issue] = full_flag
     
     # compute the l4z1hbz
     l4z1hbz_seq = {}
@@ -211,6 +213,18 @@ def run(args):
     issue_file = args.issue_file
     port = args.port
     lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file)
+    # record the information
+    record_file = "./issues/record.csv"
+    with open(record_file, 'w') as record_f:
+        head = "%s\t%s\t%s\t%s\n" % ("期数", "号码", "4码", "6码")
+        keys = sorted(full_matched.keys())
+        for k in keys:
+            nums = ''.join(map(str, lottery[k]["numbers"]))
+            m4 = 'x' if matched[k] else 'o'
+            m6 = 'x' if full_matched[k] else 'o'
+            line = "%s\t%s\t%s\t%s\n" % (k, nums, m4, m6)
+            record_f.write(line)
+
     previous = sorted(lottery.keys())[-1]
     context = zmq.Context()
     socket = context.socket(zmq.SUB)
@@ -255,10 +269,23 @@ def run(args):
 
             signals = generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq)
 
+            # write the record
+
+            with open(record_file, 'a+') as record_f:
+                nums = ''.join(map(str, lottery[cur_id]["numbers"]))
+                m4 = 'x' if matched[cur_id] else 'o'
+                m6 = 'x' if full_matched[cur_id] else 'o'
+                line = "%s\t%s\t%s\t%s\n" % (cur_id, nums, m4, m6)
+                record_f.write(line)
+
             if len(signals):
-                message = template(signals, lottery[cur_id], codes[cur_id])
-                logging.info("收到信号: %s at [%s]" % (message, datetime.now(tz).isoformat()))
-                send_message(wechat, message)
+                try:
+                    message = template(signals, lottery[cur_id], codes[cur_id])
+                    logging.info("收到信号: %s at [%s]" % (message, datetime.now(tz).isoformat()))
+                    send_message(wechat, message)
+                except Exception as e:
+                    err_msg = "Send Message Error %s at %s" % (e, datetime.now(tz).isoformat())
+                    logging.info(err_msg)
 
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -364,16 +391,19 @@ def signal_1buzhong(sorted_matched):
     """1不中后信号"""
     result = None
     values = [s[1] for s in sorted_matched]
-    if np.allclose(values[:4], [True, False, True, False]):
+    value_str = ''.join(map(str, map(int, values)))
+    rule = "10{1,}10"
+    if re.match(rule, value_str):
         result = "1bz"
-
     return result
 
 def signal_2buzhong(sorted_matched):
     """2不中后信号"""
     result = None
     values = [s[1] for s in sorted_matched]
-    if np.allclose(values[:5], [True, True, False, True, False]):
+    value_str = ''.join(map(str, map(int, values)))
+    rule = "110{1,}10"
+    if re.match(rule, value_str):
         result = "2bz"
     return result
 
@@ -473,7 +503,7 @@ def signal_q4z1_after(sorted_matched, sorted_full_matched):
             next_false_index = full_values.index(False, num2)
             if next_false_index - num2 >= 4: # full q4z1
                 # check the matched luo/sha/leng ma
-                checked_values = match_values[:next_false_index]
+                checked_values = match_values[num2:next_false_index]
                 count = checked_values.count(True)
                 if count == num1:
                     return "q4z1h|%s" % rule
