@@ -33,23 +33,41 @@ def wechat_login():
     wechat = WechatExt(**login_info)
     return wechat
 
+def load_group_info(wechat):
+    groups = json.loads(wechat.get_group_list())
+    name2id = {}
+    for g in groups["groups"]:
+        name2id[g['name']] = g['id']
+    return name2id
+
 def send_message(wechat, message):
-    group_id = config.group_id
+    #group_id = config.group_id
+    content = message["content"]
+    groups = message["groups"]
     max_retry = 3
     done = False
     tried = 0
     while tried < max_retry and not done:
         tried += 1
         try:
+            group2id = load_group_info(wechat)
+            group_ids = [group2id[g] for g in groups]
             # get user list
-            users = json.loads(wechat.get_user_list(groupid=group_id))
-            for u in users["contacts"]:
-                uid = u["id"]
-                wechat.send_message(uid, message)
+            for group_id in group_ids:
+                users = json.loads(wechat.get_user_list(groupid=group_id))
+                for u in users["contacts"]:
+                    try:
+                        uid = u["id"]
+                        wechat.send_message(uid, content)
+                    except Exception as e:
+                        logging.info('Failed to send message to %r' % uid)
+                        
             done = True
         except Exception as e:
             logging.info("retry logining to Wechat")
-            logging.info(e)
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            err_msg = "Error: %s, in Line No %d" % (exc_type, exc_tb.tb_lineno)
+            logging.info("Failed to send the mail: [%s]" % err_msg)
             time.sleep(1)
             wechat = wechat_login()
 
@@ -281,9 +299,10 @@ def run(args):
 
             if len(signals):
                 try:
-                    message = template(signals, lottery[cur_id], codes[cur_id])
-                    logging.info("收到信号: %s at [%s]" % (message, datetime.now(tz).isoformat()))
-                    send_message(wechat, message)
+                    messages = template(signals, lottery[cur_id], codes[cur_id])
+                    for message in messages:
+                        logging.info("收到信号: %s at [%s]" % (message["content"], datetime.now(tz).isoformat()))
+                        send_message(wechat, message)
                 except Exception as e:
                     err_msg = "Send Message Error %s at %s" % (e, datetime.now(tz).isoformat())
                     logging.info(err_msg)
@@ -297,7 +316,7 @@ def run(args):
 
 def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     signals = []
-    
+    """ 
     signal = signal_continue3_l4z1(sorted_matched)
     if signal:
         signals.append(signal)
@@ -317,17 +336,20 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     if signal:
         signals.append(signal)
     logging.info("检测连４中１: [%s]" % signal)
+
+    """
     
-    signal = signal_l4z1_after(sorted_matched)
+    signal = signal_l4z1_after_new(sorted_matched)
     if signal:
         signals.append(signal)
     logging.info("检测连４中１后:[%s]" % signal)
 
-    signal = signal_1buzhong(sorted_matched)
+    signal = signal_1buzhong_new(sorted_matched)
     if signal:
         signals.append(signal)
     logging.info("检测１不中[%s]" % signal)
-    
+   
+    """
     signal = signal_2buzhong(sorted_matched)
     if signal:
         signals.append(signal)
@@ -337,7 +359,7 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     if signal:
         signals.append(signal)
     logging.info("全４中１后具体信号 [%s]" % signal)
-
+    """
     return signals
 
 
@@ -345,17 +367,18 @@ def template(signals, cur_lot, cur_code):
     sig2name = {"l4z1": "连４中１", "1bz": "１不中", "2bz": "２不中", 
             "l4z1h": "连４中１后", "3l4z1":"连续３次连４中１后",  "3l3z1": "连续３次连３中１后", 
             "4day_l4z1hbz": "连续４天出现连４中１后不中", "q4z1h": "全４中１后"}
+    # load signal group information
+    signal_groups = json.load(open('./group_setting.json'))
     
     code2name = {"luo_ma": "落码", "leng_1_ma": "冷１码", "leng_2_ma": "冷２码",
             "sha_ma": "杀码", "chuan_1_ma": "传１码", "chuan_2_ma":"传２码", "ge_ma": "隔码"}
 
     dig2name = {3: "十位", 4: "个位"}
     # issue message
-    message = "当前期数:%s, 开奖号码: %s\n" % (cur_lot["issue"], 
-            "".join(map(str,cur_lot["numbers"])))
-
+    messages = []
     # signal message
     for i, signal in enumerate(signals):
+        message = "当前期数:%s, 开奖号码: %s\n" % (cur_lot["issue"], "".join(map(str,cur_lot["numbers"])))
         sig_info = signal.split("|")
         if len(sig_info) > 1:
             name = sig2name[sig_info[0]] + "_" + sig_info[1]
@@ -363,16 +386,19 @@ def template(signals, cur_lot, cur_code):
             name = sig2name[sig_info[0]]
         message += "信号 %d: %s\n" % (i+1, name)
 
-    # code message
-    message += "码信息\n"
-    code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma", "ge_ma", "chuan_1_ma", "chuan_2_ma"]
-    for i in range(3, 5):
-        dig_name = dig2name[i]
-        message += "%s: " % dig_name
-        for code in code_order:
-            message += "%s(%d) " % (code2name[code], cur_code[i][code])
-        message += "\n"
-    return message
+        # code message
+        message += "码信息\n"
+        #code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma", "ge_ma", "chuan_1_ma", "chuan_2_ma"]
+        code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma"]
+        for i in range(3, 5):
+            dig_name = dig2name[i]
+            message += "%s: " % dig_name
+            for code in code_order:
+                message += "%d " % (cur_code[i][code])
+            message += "\n"
+        groups = signal_groups.get(sig_info[0])
+        messages.append({"content": message, "groups": groups})
+    return messages
 
 
 def signal_lian4zhong1(sorted_matched):
@@ -387,6 +413,18 @@ def signal_lian4zhong1(sorted_matched):
             result = "l4z1"
             logging.info("连４中１信号 %s " % values[:next_false_index+1])
     return result
+
+def signal_1buzhong_new(sorted_match):
+    sig_alg = [signal_1buzhong, signal_2buzhong, signal_3buzhong]
+    result = None
+    for alg in sig_alg:
+        r = alg(sorted_match)
+        if r:
+            result = r
+    if result:
+        result = '1bz|1-' + result[0]
+    return result
+
 
 def signal_1buzhong(sorted_matched):
     """1不中后信号"""
@@ -408,6 +446,17 @@ def signal_2buzhong(sorted_matched):
         result = "2bz"
     return result
 
+def signal_3buzhong(sorted_matched):
+    """3不中后信号"""
+    result = None
+    values = [s[1] for s in sorted_matched]
+    value_str = ''.join(map(str, map(int, values)))
+    rule = "1110{1,}10"
+    if re.match(rule, value_str):
+        result = "3bz"
+    return result
+
+
 def signal_l4z1_after(sorted_matched):
     """连４中１后具体信号"""
     result = None
@@ -422,6 +471,23 @@ def signal_l4z1_after(sorted_matched):
             result = "l4z1h|" + rule
             logging.info("连４中１后具体信号 %s" % values[:(num1+num2+1)])
     return result
+
+def signal_l4z1_after_new(sorted_matched):
+    """连4中1后信号新算法"""
+    result = None
+    values = [s[1] for s in sorted_matched]
+    sufix_rule = [1, 2, 3]
+    for r in sufix_rule:
+        sufix_pattern = [True] * (r - 1) + [False]
+        if np.allclose(values[:r], sufix_pattern):
+            # check the prefix: detect the continue Trues
+            true_idx = 0
+            while values[r + true_idx]:
+                true_idx += 1
+            if true_idx >= 4:
+                result = "l4z1h|%d-%d" % (true_idx, r)
+    return result
+            
         
 def signal_continue3_l4z1(sorted_matched):
     """连续3次连4中1信号"""
