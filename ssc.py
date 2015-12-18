@@ -19,6 +19,7 @@ from dateutil import parser
 from wechat_sdk import WechatExt
 import config
 import time
+from wechat_sdk.exceptions import NeedLoginError
 
 """
 Hint:
@@ -27,6 +28,16 @@ Hint:
 
 logging.basicConfig(filename='./log/scc.log', level=logging.INFO)
 
+
+def init_wechat(token=None, cookies=None, login=False):
+    login_info = config.login_info
+    if token:
+        login_info["token"] = token
+    if cookies:
+        login_info["cookies"] = cookies
+    login_info["login"] = login
+    wechat = WechatExt(**login_info)
+    return wechat
 
 def wechat_login():
     login_info = config.login_info
@@ -51,6 +62,7 @@ def send_message(wechat, message):
         tried += 1
         try:
             group2id = load_group_info(wechat)
+            id2group = {v:k for k,v in group2id.items()}
             group_ids = [group2id[g] for g in groups]
             # get user list
             for group_id in group_ids:
@@ -58,18 +70,27 @@ def send_message(wechat, message):
                 for u in users["contacts"]:
                     try:
                         uid = u["id"]
+                        nick_name = u['nick_name']
                         wechat.send_message(uid, content)
+                        logging.info("send message to user %s in group %s" % (nick_name, id2group[group_id]))
                     except Exception as e:
-                        logging.info('Failed to send message to %r' % uid)
-                        
+                        logging.info('Failed to send message to %s with error %s' % (nick_name, e))
+
             done = True
+        except NeedLoginError as nle:
+            logging.info("Need to ReLogin Wechat")
+            try:
+                wechat.login()
+            except Exception as e:
+                logging.info("Failed to relogin Wechat, try reiniate the Wechat")
+                wechat = init_wechat(login=True)
         except Exception as e:
-            logging.info("retry logining to Wechat")
+            logging.info("Need to reinitiate Wechat")
             exc_type, exc_obj, exc_tb = sys.exc_info()
             err_msg = "Error: %s, in Line No %d" % (exc_type, exc_tb.tb_lineno)
             logging.info("Failed to send the mail: [%s]" % err_msg)
             time.sleep(1)
-            wechat = wechat_login()
+            wechat = init_wechat(login=True)
 
 
 def send_email(user, pwd, recipient, subject, body):
@@ -104,7 +125,7 @@ def parse_args():
 def initiate_codes(lottery_file):
     """
     construct the missing matrix diction, the key is the round
-    and the value is missing times, for inititate, we start from 
+    and the value is missing times, for inititate, we start from
     20150901001
     """
     # load the lottery data
@@ -140,7 +161,7 @@ def initiate_codes(lottery_file):
                         mis_count += 1
                         cur = lot["previous"]
                 lot_miss_info[issue][i][dig] = mis_count
-   
+
     # compute the codes information
     codes = {}
     for issue in issues[100:]:
@@ -170,7 +191,7 @@ def initiate_codes(lottery_file):
         flag, full_flag = update_match(lottery[issue], prev_code)
         matched[issue] = flag
         full_matched[issue] = full_flag
-    
+
     # compute the l4z1hbz
     l4z1hbz_seq = {}
     for issue in issues[108:]:
@@ -248,7 +269,8 @@ def run(args):
     context = zmq.Context()
     socket = context.socket(zmq.SUB)
     logging.info('Start to receiving subscription from SCC ingest process')
-    wechat = wechat_login()
+    wechat = init_wechat()
+    wechat.login()
     logging.info('Login into WeChat')
     try:
         socket.connect("tcp://localhost:%s" % port)
@@ -316,12 +338,12 @@ def run(args):
 
 def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     signals = []
-    """ 
+    """
     signal = signal_continue3_l4z1(sorted_matched)
     if signal:
         signals.append(signal)
     logging.info("检测连续３次连４中１后不中: [%s]" % signal)
-    
+
     signal = signal_continue3_l3z1(sorted_matched)
     if signal:
         signals.append(signal)
@@ -338,7 +360,7 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     logging.info("检测连４中１: [%s]" % signal)
 
     """
-    
+
     signal = signal_l4z1_after_new(sorted_matched)
     if signal:
         signals.append(signal)
@@ -348,7 +370,7 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     if signal:
         signals.append(signal)
     logging.info("检测１不中[%s]" % signal)
-   
+
     """
     signal = signal_2buzhong(sorted_matched)
     if signal:
@@ -364,12 +386,12 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
 
 
 def template(signals, cur_lot, cur_code):
-    sig2name = {"l4z1": "连４中１", "1bz": "１不中", "2bz": "２不中", 
-            "l4z1h": "连４中１后", "3l4z1":"连续３次连４中１后",  "3l3z1": "连续３次连３中１后", 
+    sig2name = {"l4z1": "连４中１", "1bz": "１不中", "2bz": "２不中",
+            "l4z1h": "连４中１后", "3l4z1":"连续３次连４中１后",  "3l3z1": "连续３次连３中１后",
             "4day_l4z1hbz": "连续４天出现连４中１后不中", "q4z1h": "全４中１后"}
     # load signal group information
     signal_groups = json.load(open('./group_setting.json'))
-    
+
     code2name = {"luo_ma": "落码", "leng_1_ma": "冷１码", "leng_2_ma": "冷２码",
             "sha_ma": "杀码", "chuan_1_ma": "传１码", "chuan_2_ma":"传２码", "ge_ma": "隔码"}
 
@@ -487,8 +509,8 @@ def signal_l4z1_after_new(sorted_matched):
             if true_idx >= 4:
                 result = "l4z1h|%d-%d" % (true_idx, r)
     return result
-            
-        
+
+
 def signal_continue3_l4z1(sorted_matched):
     """连续3次连4中1信号"""
     result = None
@@ -533,7 +555,7 @@ def signal_4day_l4z1hbz(l4z1hbz_sequence):
     curr_id = issue_ids[0]
     curr_day = parser.parse(curr_id[:6])
     days = [(curr_day - timedelta(days=i)).strftime("%y%m%d") for i in range(4)]
-    
+
     # collect signals
     proof_ids = []
     for i, day in enumerate(days):
