@@ -16,8 +16,8 @@ import zmq
 import calendar
 
 
-def download(url):
-    excel = urllib2.urlopen(url).read()
+def download(url, timeout=30):
+    excel = urllib2.urlopen(url, timeout=timeout).read()
     wb = xlrd.open_workbook(file_contents=excel)
     sb = wb.sheet_by_index(0)
     issues = []
@@ -61,7 +61,18 @@ def main():
 
         current_day = begin_day - timedelta(days=1)
         url = url_format % (start, end)
-        batch = download(url)
+        max_try = 3
+        done = False
+        tried = 0
+        while tried < max_try and not done:
+            try:
+                batch = download(url)
+                done = True
+            except:
+                tried += 1
+        if not done:
+            print "Failed to download %d" % i
+            break
         print 'Finish %d' % i
         issues.insert(0, batch)
     # write to file
