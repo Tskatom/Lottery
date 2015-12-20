@@ -19,82 +19,37 @@ from dateutil import parser
 from wechat_sdk import WechatExt
 import config
 import time
+import cProfile
 
 """
-Hint:
-    连４中１表示连续４期或者４期以上的数字出现在落／杀／冷码后，然后出现一期不在，发送信号
+Simulate buying strategy
 """
 
 logging.basicConfig(filename='./log/simulation.log', level=logging.INFO)
 
 
-def wechat_login():
-    login_info = config.login_info
-    wechat = WechatExt(**login_info)
-    return wechat
-
-def send_message(wechat, message):
-    group_id = config.group_id
-    max_retry = 3
-    done = False
-    tried = 0
-    while tried < max_retry and not done:
-        tried += 1
-        try:
-            # get user list
-            users = json.loads(wechat.get_user_list(groupid=group_id))
-            for u in users["contacts"]:
-                uid = u["id"]
-                wechat.send_message(uid, message)
-            done = True
-        except Exception as e:
-            logging.info("retry logining to Wechat")
-            logging.info(e)
-            time.sleep(1)
-            wechat = wechat_login()
-
-
-def send_email(user, pwd, recipient, subject, body):
-    gmail_user = user
-    gmail_pwd = pwd
-    FROM = user
-    TO = recipient if type(recipient) is list else [recipient]
-    SUBJECT = subject
-    TEXT = body
-
-    message = """From: %s\nTo: %s\nSubject: %s\n\n%s""" % (
-            FROM, ", ".join(TO), SUBJECT, TEXT)
-    try:
-        server = smtplib.SMTP("smtp.gmail.com", 587)
-        server.ehlo()
-        server.starttls()
-        server.login(gmail_user, gmail_pwd)
-        server.sendmail(FROM, TO, message)
-        server.close()
-        logging.info("Successfully send the mail")
-    except:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        err_msg = "Error: %s, in Line No %d" % (exc_type, exc_tb.tb_lineno)
-        logging.info("Failed to send the mail: [%s]" % err_msg)
-
 def parse_args():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--port', type=str, default='6000', help='the ZMQ port')
-    ap.add_argument('--issue_file', type=str, default='./issues/init_issue.csv')
+    ap.add_argument('--issue_file', type=str, default='./issues/historical_issues.csv')
+    ap.add_argument('--k', type=int, default=300, 
+            help="the number of issues for initiate")
+    ap.add_argument('--header', action='store_true', help='whether the issuef file contain header')
     return ap.parse_args()
 
-def initiate_codes(lottery_file):
+def initiate_codes(lottery_file, header=False, top=300):
     """
     construct the missing matrix diction, the key is the round
     and the value is missing times, for inititate, we start from 
-    20150901001
+    we use the first 300 as initiate
     """
     # load the lottery data
     lottery = {}
     with open(lottery_file) as lf:
-        head = lf.readline()
+        if header:
+            head = lf.readline()
         prev = None
-        for line in lf:
+        for i in xrange(top):
+            line = lf.readline()
             info = line.strip().split('|')
             issue = info[0]
             nums = map(int, info[1:])
@@ -206,28 +161,32 @@ def update_match(lot, prev_code):
 
 
 def run(args):
+    k = args.k
+    header = args.header
     tz = pytz.timezone(pytz.country_timezones('cn')[0])
     now = datetime.now(tz)
-    logging.info('Start Scc Monitoring at [%s]' % now.isoformat())
+    logging.info('Start Simulate at [%s]' % now.isoformat())
 
     # load the current issue files
     issue_file = args.issue_file
-    port = args.port
-    lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file)
+    # initiate codes
+    lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file, header=header, top=k)
     # record the information
     record_file = "./issues/buy_record.csv"
 
     previous = sorted(lottery.keys())[-1]
-    context = zmq.Context()
-    socket = context.socket(zmq.SUB)
-    logging.info('Start to receiving subscription from SCC ingest process')
-    wechat = wechat_login()
-    logging.info('Login into WeChat')
-    try:
-        socket.connect("tcp://localhost:%s" % port)
-        socket.setsockopt(zmq.SUBSCRIBE, "")
-        while True:
-            data = socket.recv()
+    
+    # Simulate start
+    with open(issue_file) as isf, open(record_file, 'w') as ref:
+        if header:
+            head = header.readline
+        # jump the previous k issues
+        for i in xrange(k):
+            isf.readline()
+        # start to get new issues
+        sorted_matched = sorted(matched.items(), key=lambda x:x[0], reverse=True)
+        sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0], reverse=True)
+        for data in isf:
             logging.info("Received update issue[%s] at [%s]" % (data.strip(), datetime.now(tz).isoformat()))
             # update lottery information
             data_str = data.strip()
@@ -256,8 +215,8 @@ def run(args):
             previous = cur_id
 
             # generate the signal
-            sorted_matched = sorted(matched.items(), key=lambda x:x[0], reverse=True)
-            sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0], reverse=True)
+            sorted_matched.insert(0, (cur_id, flag))
+            sorted_full_matched.insert(0, (cur_id, full_flag))
 
             signals = generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq)
 
@@ -274,30 +233,23 @@ def run(args):
                 try:
                     message = template(signals, lottery[cur_id], codes[cur_id])
                     logging.info("收到信号: %s at [%s]" % (message, datetime.now(tz).isoformat()))
-                    # send_message(wechat, message)
                     # check auto buy
                     buy_info = autobuy_check(signals)
                     if buy_info:
                         sig, times = buy_info
-                        buy_message = buy_template(sig, times, lottery[cur_id], codes[cur_id]) 
+                        buy_message, choosed = buy_template(sig, times, lottery[cur_id], codes[cur_id]) 
                         full_message += buy_message
                     else:
                         full_message += normal_message
                 except Exception as e:
-                    err_msg = "Send Message Error %s at %s" % (e, datetime.now(tz).isoformat())
+                    exc_type, exc_obj, exc_tb = sys.exc_info()
+                    err_msg = "Send Message Error %s at %s, Error line [%d]" % (e, datetime.now(tz).isoformat(), exc_tb.tb_lineno)
                     logging.info(err_msg)
             else:
                 full_message += normal_message
 
-            print full_message
-            with open(record_file, 'a+') as record_f:
-                record_f.write(full_message)
+            ref.write(full_message)
 
-    except:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        err_msg = "Error: %s, in Line No %d" % (exc_type, exc_tb.tb_lineno)
-        print sys.exc_info()
-        logging.info(err_msg)
 
 
 def autobuy_check(signals):
@@ -307,7 +259,7 @@ def autobuy_check(signals):
         sig_type = sig.split("|")[0]
         if sig_type in buy_rules:
             if sig_type == "l4z1all":
-                buy_time = int(sig_type.split("-")[1])
+                buy_time = int(sig.split("|")[1].split("-")[1])
                 times = buy_rules[sig_type][buy_time]
             else:
                 times = buy_rules[sig_type]
@@ -385,6 +337,7 @@ def normal_template(cur_lot, cur_code):
     for dig in sorted(dig2name.keys()):
         cs = range(10)
         for code in code_order:
+            # choose code not in luo/sha/leng ma
             code_mess += "%d" % cur_code[dig][code]
             if cur_code[dig][code] in cs:
                 cs.remove(cur_code[dig][code])
@@ -430,7 +383,7 @@ def buy_template(sig, times, cur_lot, cur_code):
     choosed_mess = ",".join(choosed)
 
     message = "%s\t%s\t%s\n" % (line, choosed_mess, code_mess)
-    return message
+    return message, choosed
 
 
 def template(signals, cur_lot, cur_code):
@@ -520,9 +473,10 @@ def signal_first_l4z1_all(sorted_matched):
             # check second part rule
             last_false = values.index(False, num)
             continue_true = last_false - num
-            if continue_true >= 4 and continue_true != 8:
+            if continue_true >= 4:
                 result = "l4z1all|%d-%d" % (continue_true, num)
 
+    """
     if result:
         # check if it is the first signal today
         found = False
@@ -540,7 +494,7 @@ def signal_first_l4z1_all(sorted_matched):
             return result
         else:
             return None
-
+    """
     return result
 
 
@@ -661,4 +615,4 @@ def main():
     run(args)
 
 if __name__ == "__main__":
-    main()
+    cProfile.run('main()')
