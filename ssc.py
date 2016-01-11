@@ -66,7 +66,7 @@ def send_message(wechat, message):
             group_ids = [group2id[g] for g in groups]
             # get user list
             for group_id in group_ids:
-                users = json.loads(wechat.get_user_list(groupid=group_id))
+                users = json.loads(wechat.get_user_list(groupid=group_id, pagesize=500))
                 for u in users["contacts"]:
                     try:
                         uid = u["id"]
