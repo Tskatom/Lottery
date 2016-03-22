@@ -13,12 +13,11 @@ import pandas as pds
 def parse_args():
     ap = argparse.ArgumentParser()
     ap.add_argument('--buyfile', type=str, default='./issues/buy_record.csv')
-    ap.add_argument('--out', type=str, default='./issues/result.csv')
     ap.add_argument('--detail', type=str, default='./issues/detail.csv')
     return ap.parse_args()
 
-def evaluate(buyfile, outfile, detail_file):
-    with open(buyfile) as bf, open(outfile, 'w') as otf, open(detail_file, 'w') as det:
+def evaluate(buyfile, detail_file):
+    with open(buyfile) as bf,  open(detail_file, 'w') as det:
         lines = bf.readlines()
         pairs = zip(lines, lines[1:])
         # detail file format
@@ -43,8 +42,20 @@ def evaluate(buyfile, outfile, detail_file):
 
             tens, units = map(len, buy_info[5].split(","))
             cost = tens * units * 2 * times
-            
+           
+            """
             win_flag = True if target.strip().split("\t")[2] == "o" else False
+            """
+            target_shiwei = target.strip().split("\t")[1][-2]
+            target_gewei = target.strip().split("\t")[1][-1]
+            buy_shiwei = buy_info[5].split(",")[0]
+            buy_gewei = buy_info[5].split(",")[1]
+            
+            if target_shiwei in buy_shiwei and target_gewei in buy_gewei:
+                win_flag = True
+            else:
+                win_flag = False
+
             win_mark = 1 if win_flag else 0
 
             reward = 2 * times * 90 if win_flag else 0
@@ -74,10 +85,9 @@ def evaluate(buyfile, outfile, detail_file):
 def main():
     args = parse_args()
     buyfile = args.buyfile
-    out = args.out
     detail = args.detail
 
-    evaluate(buyfile, out, detail)
+    evaluate(buyfile, detail)
 
 if __name__ == "__main__":
     main()

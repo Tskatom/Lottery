@@ -200,8 +200,8 @@ def run(args):
         for i in xrange(k):
             isf.readline()
         # start to get new issues
-        sorted_matched = sorted(matched.items(), key=lambda x:x[0], reverse=True)
-        sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0], reverse=True)
+        sorted_matched = sorted(matched.items(), key=lambda x:x[0])
+        sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0])
         counts = 0
         for data in isf:
             logging.info("Received update issue[%s] at [%s]" % (data.strip(), datetime.now(tz).isoformat()))
@@ -227,13 +227,13 @@ def run(args):
             full_matched[cur_id] = full_flag
 
             # update l4z1hbz
-            l4z1hbz_seq[cur_id] = compute_l4z1hbz(cur_id, matched, lottery)
+            #l4z1hbz_seq[cur_id] = compute_l4z1hbz(cur_id, matched, lottery)
 
             previous = cur_id
 
             # generate the signal
-            sorted_matched.insert(0, (cur_id, flag))
-            sorted_full_matched.insert(0, (cur_id, full_flag))
+            sorted_matched.append((cur_id, flag))
+            sorted_full_matched.append((cur_id, full_flag))
 
             signals = generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq)
 
@@ -494,7 +494,7 @@ def signal_lian4zhong1(sorted_matched):
 def signal_1buzhong(sorted_matched):
     """1不中后信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     value_str = ''.join(map(str, map(int, values)))
     rule = "10{1,}10"
     if re.match(rule, value_str):
@@ -504,7 +504,7 @@ def signal_1buzhong(sorted_matched):
 def signal_2buzhong(sorted_matched):
     """2不中后信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     value_str = ''.join(map(str, map(int, values)))
     rule = "110{1,}10"
     if re.match(rule, value_str):
@@ -514,7 +514,7 @@ def signal_2buzhong(sorted_matched):
 def signal_3buzhong(sorted_matched):
     """3不中后信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     value_str = ''.join(map(str, map(int, values)))
     rule = "1110{1,}10"
     if re.match(rule, value_str):
@@ -523,7 +523,7 @@ def signal_3buzhong(sorted_matched):
 
 def signal_first_l4z1_all(sorted_matched):
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rules = [1, 2, 3] # represent 不中1/2/3
     for num in rules:
         p2 = [True] * (num - 1) + [False]
@@ -559,7 +559,7 @@ def signal_first_l4z1_all(sorted_matched):
 def signal_l4z1_after(sorted_matched):
     """连４中１后具体信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rules = ["4-3", "5-1", "5-2", "5-3", "6-1", "6-3", "7-2", "7-3",
             "9-1", "9-2", "9-3", "10-2", "11-1", "11-2", "13-1", "13-2", "14-3"]
     for rule in rules:
@@ -574,7 +574,7 @@ def signal_l4z1_after(sorted_matched):
 def signal_continue3_l4z1(sorted_matched):
     """连续3次连4中1信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rule = "(01{4,})(.*?)(01{4,})(.*?)(01{4,})"
     value_str = ''.join(map(str, map(int, values)))
     matched = re.match(rule, value_str)
@@ -592,7 +592,7 @@ def signal_continue3_l4z1(sorted_matched):
 def signal_continue3_l3z1(sorted_matched):
     """连续3次连3中1信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rule = "(01{3}(?!1))(.*?)(01{3}(?!1))(.*?)(01{3}(?!1))"
     value_str = ''.join(map(str, map(int, values)))
     matched = re.match(rule, value_str)
@@ -642,8 +642,8 @@ def signal_4day_l4z1hbz(l4z1hbz_sequence):
 def signal_q4z1_after(sorted_matched, sorted_full_matched):
     """ 检测全４中１具体信号"""
     rules = ["1-1", "1-2", "1-3", "2-2", "3-3", "5-2"]
-    match_values = [s[1] for s in sorted_matched]
-    full_values = [s[1] for s in sorted_full_matched]
+    match_values = [s[1] for s in sorted_matched[-1:-50:-1]]
+    full_values = [s[1] for s in sorted_full_matched[-1:-50:-1]]
 
     for rule in rules:
         num1, num2 = map(int, rule.split("-"))
