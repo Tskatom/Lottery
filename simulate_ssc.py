@@ -34,9 +34,11 @@ def parse_args():
     ap.add_argument('--k', type=int, default=300, 
             help="the number of issues for initiate")
     ap.add_argument('--header', action='store_true', help='whether the issuef file contain header')
+    ap.add_argument("--repeat", action='store_true', help='whether repeat the buying policy')
+    ap.add_argument("--l3", action="store_true", help="whether use the leng 3")
     return ap.parse_args()
 
-def initiate_codes(lottery_file, header=False, top=300):
+def initiate_codes(lottery_file, header=False, top=300, l3=False):
     """
     construct the missing matrix diction, the key is the round
     and the value is missing times, for inititate, we start from 
@@ -99,6 +101,8 @@ def initiate_codes(lottery_file, header=False, top=300):
     matched = {} # 只匹配落／杀／冷１２码
     full_matched = {}# 匹配所有６码
     match_keys = ["luo_ma", "leng_1_ma", "leng_2_ma", "sha_ma"]
+    if l3:
+        match_keys.append("leng_3_ma")
     full_match_keys = match_keys + ["chuan_1", "chuan_2", "ge_ma"]
     for issue in issues[101:]:
         prev_id = lottery[issue]["previous"]
@@ -122,6 +126,7 @@ def compute_code(issue_id, dig, lottery, lot_miss_info):
     miss = sorted(lot_miss_info[issue_id][dig].items(), key=lambda x:x[1], reverse=True)
     code["leng_1_ma"] = miss[0][0]
     code["leng_2_ma"] = miss[1][0]
+    code["leng_3_ma"] = miss[2][0]
     if dig == 3:
         code["sha_ma"] = (lot["numbers"][dig] - 1) % 10
     elif dig == 4:
@@ -143,11 +148,13 @@ def update_miss(lot, prev_miss_info):
                 miss[dig][i] = prev_miss_info[dig][i] + 1
     return miss
 
-def update_match(lot, prev_code):
+def update_match(lot, prev_code, l3=False):
     numbers = lot["numbers"]
     flag = False
     full_flag = False
     match_keys = ["luo_ma", "leng_1_ma", "leng_2_ma", "sha_ma"]
+    if l3:
+        match_keys.append("leng_3_ma")
     full_match_keys = match_keys + ["chuan_1_ma", "chuan_2_ma", "ge_ma"]
     for dig in range(3, 5):
         codes = prev_code[dig]
@@ -163,6 +170,8 @@ def update_match(lot, prev_code):
 def run(args):
     k = args.k
     header = args.header
+    repeat = args.repeat
+    l3 = args.l3
     tz = pytz.timezone(pytz.country_timezones('cn')[0])
     now = datetime.now(tz)
     logging.info('Start Simulate at [%s]' % now.isoformat())
@@ -170,9 +179,16 @@ def run(args):
     # load the current issue files
     issue_file = args.issue_file
     # initiate codes
-    lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file, header=header, top=k)
+    lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file, header=header, top=k, l3=l3)
     # record the information
-    record_file = "./issues/buy_record.csv"
+    if repeat:
+        record_file = "./issues/buy_record_repeat.csv"
+        if l3:
+            record_file = "./issues/buy_record_repeat_l3.csv"
+    else:
+        record_file = "./issues/buy_record_normal.csv"
+        if l3:
+            record_file = "./issues/buy_record_normal_l3.csv"
 
     previous = sorted(lottery.keys())[-1]
     
@@ -186,6 +202,7 @@ def run(args):
         # start to get new issues
         sorted_matched = sorted(matched.items(), key=lambda x:x[0], reverse=True)
         sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0], reverse=True)
+        counts = 0
         for data in isf:
             logging.info("Received update issue[%s] at [%s]" % (data.strip(), datetime.now(tz).isoformat()))
             # update lottery information
@@ -205,7 +222,7 @@ def run(args):
 
             # update matched
             prev_code = codes[previous]
-            flag, full_flag = update_match(lottery[cur_id], prev_code)
+            flag, full_flag = update_match(lottery[cur_id], prev_code, l3=l3)
             matched[cur_id] = flag
             full_matched[cur_id] = full_flag
 
@@ -227,24 +244,42 @@ def run(args):
             m6 = 'x' if full_matched[cur_id] else 'o'
             
             full_message = "%s\t%s\t%s\t%s\t" % (cur_id, nums, m4, m6)
-            normal_message = normal_template(lottery[cur_id], codes[cur_id])
+            normal_message = normal_template(lottery[cur_id], codes[cur_id], l3=l3)
 
             if len(signals):
                 try:
-                    message = template(signals, lottery[cur_id], codes[cur_id])
+                    message = template(signals, lottery[cur_id], codes[cur_id],l3=l3)
                     logging.info("收到信号: %s at [%s]" % (message, datetime.now(tz).isoformat()))
-                    # check auto buy
-                    buy_info = autobuy_check(signals)
-                    if buy_info:
-                        sig, times = buy_info
-                        buy_message, choosed = buy_template(sig, times, lottery[cur_id], codes[cur_id]) 
-                        full_message += buy_message
+                    if not repeat:
+                        # check auto buy
+                        buy_info = autobuy_check(signals)
+                        if buy_info:
+                            sig, times = buy_info
+                            buy_message, choosed = buy_template(sig, times, lottery[cur_id], codes[cur_id], l3=l3) 
+                            full_message += buy_message
+                        else:
+                            full_message += normal_message
                     else:
-                        full_message += normal_message
+                        buy_info = autobuy_check_repeat(signals)
+                        if buy_info:
+                            sig, times = buy_info
+                            buy_message, choosed = buy_template(sig, times, lottery[cur_id], codes[cur_id], l3=l3)
+                            old_buymessage = buy_message
+                            counts = 2
+                            full_message += buy_message
+                        elif counts > 0:
+                            full_message += old_buymessage
+                            counts -= 1
+                        else:
+                            full_message += normal_message
+
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
                     err_msg = "Send Message Error %s at %s, Error line [%d]" % (e, datetime.now(tz).isoformat(), exc_tb.tb_lineno)
                     logging.info(err_msg)
+            elif counts > 0:
+                full_message += old_buymessage
+                counts -= 1
             else:
                 full_message += normal_message
 
@@ -254,7 +289,8 @@ def run(args):
 
 def autobuy_check(signals):
     # 检测自动下注信号
-    buy_rules = {"1bz": 3, "2bz": 6, "3bz": 9, "l4z1all": {1: 3, 2:6, 3:9}}
+    #buy_rules = {"1bz": 3, "2bz": 6, "3bz": 9, "l4z1all": {1: 3, 2:6, 3:9}}
+    buy_rules = {"1bz": 1, "2bz": 1, "3bz": 1, "l4z1all": {1: 1, 2:1, 3:1}}
     for sig in signals:
         sig_type = sig.split("|")[0]
         if sig_type in buy_rules:
@@ -265,7 +301,22 @@ def autobuy_check(signals):
                 times = buy_rules[sig_type]
             return sig, times
     return None
-    
+
+def autobuy_check_repeat(signals):
+    buy_rules = {"1bz": 1, "l4z1all": {1: 1}}
+    for sig in signals:
+        sig_type = sig.split("|")[0]
+        if sig_type in buy_rules:
+            if sig_type == "l4z1all":
+                buy_time = int(sig.split("|")[1].split("-")[1])
+                if buy_time == 1:
+                    times = buy_rules[sig_type][buy_time]
+                    return sig, times
+            else:
+                times = buy_rules[sig_type]
+                return sig, times
+    return None
+
 
 def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     signals = []
@@ -327,12 +378,14 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
 
     return signals
 
-def normal_template(cur_lot, cur_code):
+def normal_template(cur_lot, cur_code, l3=False):
     dig2name = {3: "十位", 4: "个位"}
     # issue message
     line = "------"
     code_mess = ""
     code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma"]
+    if l3:
+        code_order.append("leng_3_ma")
     choosed = []
     for dig in sorted(dig2name.keys()):
         cs = range(10)
@@ -351,7 +404,7 @@ def normal_template(cur_lot, cur_code):
     return message
 
 
-def buy_template(sig, times, cur_lot, cur_code):
+def buy_template(sig, times, cur_lot, cur_code, l3=False):
     sig2name = {"l4z1": "连４中１", "1bz": "１不中", "2bz": "２不中", "3bz": "３不中", "l4z1all": "连４中１后",
             "l4z1h": "连４中１后", "3l4z1":"连续３次连４中１后",  "3l3z1": "连续３次连３中１后", 
             "4day_l4z1hbz": "连续４天出现连４中１后不中", "q4z1h": "全４中１后"}
@@ -369,6 +422,8 @@ def buy_template(sig, times, cur_lot, cur_code):
     line = "%s|%d倍" % (name, times)
     code_mess = ""
     code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma"]
+    if l3:
+        code_order.append("leng_3_ma")
     choosed = []
     for dig in sorted(dig2name.keys()):
         cs = range(10)
@@ -386,12 +441,12 @@ def buy_template(sig, times, cur_lot, cur_code):
     return message, choosed
 
 
-def template(signals, cur_lot, cur_code):
+def template(signals, cur_lot, cur_code, l3=False):
     sig2name = {"l4z1": "连４中１", "1bz": "１不中", "2bz": "２不中", "3bz": "３不中", "l4z1all": "连４中１后",
             "l4z1h": "连４中１后", "3l4z1":"连续３次连４中１后",  "3l3z1": "连续３次连３中１后", 
             "4day_l4z1hbz": "连续４天出现连４中１后不中", "q4z1h": "全４中１后"}
     
-    code2name = {"luo_ma": "落码", "leng_1_ma": "冷１码", "leng_2_ma": "冷２码",
+    code2name = {"luo_ma": "落码", "leng_1_ma": "冷１码", "leng_2_ma": "冷２码", "leng_3_ma": "冷3码",
             "sha_ma": "杀码", "chuan_1_ma": "传１码", "chuan_2_ma":"传２码", "ge_ma": "隔码"}
 
     dig2name = {3: "十位", 4: "个位"}
@@ -411,6 +466,9 @@ def template(signals, cur_lot, cur_code):
     # code message
     message += "码信息\n"
     code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma", "ge_ma", "chuan_1_ma", "chuan_2_ma"]
+    if l3:
+        code_order.insert(4, "leng_3_ma")
+
     for i in range(3, 5):
         dig_name = dig2name[i]
         message += "%s: " % dig_name
