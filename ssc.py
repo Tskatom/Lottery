@@ -35,15 +35,14 @@ def init_wechat(token=None, cookies=None, login=False):
     appid = credit.get("credential", "appid")
     appsecret = credit.get("credential", "AppSecret")
 
-    conf = WebchatConf(token="abcdef", appid=appid, appsecret=appsecret)
+    conf = WechatConf(token="abcdef", appid=appid, appsecret=appsecret)
     wechat = WechatBasic(conf=conf)
     return wechat
 
 def load_users(wechat):
     followers = wechat.get_followers()
     users = {}
-    for user in followers["data"]:
-        uid = user["openid"]
+    for uid in followers["data"]["openid"]:
         # get user info
         userinfo = wechat.get_user_info(uid)
         tags = userinfo["tagid_list"]
@@ -66,7 +65,7 @@ def send_message(wechat, message):
                     for tag in info["tags"]:
                         if tag in groups:
                             # send the message to the user
-                            wechat.send_text_message(uid, content)
+                            wechat.send_text_message(uid, content.decode("utf-8"))
                             logging.info('Success[%s]' % info["nickname"])
                             break
                 except Exception as e:
@@ -271,8 +270,10 @@ def run(args):
     socket = context.socket(zmq.SUB)
     logging.info('Start to receiving subscription from SCC ingest process')
     wechat = init_wechat()
-    wechat.login()
     logging.info('Login into WeChat')
+    sorted_matched = sorted(matched.items(), key=lambda x:x[0])
+    l3_sorted_matched = sorted(l3_matched.items(), key=lambda x:x[0])
+    sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0])
     try:
         socket.connect("tcp://localhost:%s" % port)
         socket.setsockopt(zmq.SUBSCRIBE, "")
@@ -307,10 +308,9 @@ def run(args):
             previous = cur_id
 
             # generate the signal
-            sorted_matched = sorted(matched.items(), key=lambda x:x[0], reverse=True)
-            l3_sorted_matched = sorted(l3_matched.items(), key=lambda x:x[0], reverse=True)
-
-            sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0], reverse=True)
+            sorted_matched.append((cur_id, flag))
+            l3_sorted_matched.append((cur_id, l3_flag))
+            sorted_full_matched.append((cur_id, full_flag))
 
             signals = generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq)
             l3_signals = generate_signals(l3_sorted_matched, sorted_full_matched, l4z1hbz_seq)
@@ -326,6 +326,7 @@ def run(args):
                 record_f.write(line)
 
             if len(signals):
+                wechat = init_wechat()
                 try:
                     messages = template(signals, lottery[cur_id], codes[cur_id], l3=False, level="entry")
                     for message in messages:
@@ -336,6 +337,7 @@ def run(args):
                     logging.info(err_msg)
 
             if len(l3_signals):
+                wechat = init_wechat()
                 try:
                     messages = template(l3_signals, lottery[cur_id], codes[cur_id], l3=True, level="middle")
                     for message in messages:
@@ -437,7 +439,7 @@ def template(signals, cur_lot, cur_code, l3=False, level="entry"):
                 message += "%d " % (cur_code[i][code])
             message += "\n"
         
-        groups = signal_groups[level]get(sig_info[0])
+        groups = signal_groups[level].get(sig_info[0])
         
         messages.append({"content": message, "groups": groups})
     return messages
