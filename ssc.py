@@ -16,11 +16,11 @@ import smtplib
 import numpy as np
 import re
 from dateutil import parser
-from wechat_sdk import WechatExt
+from wechat_sdk import WechatBasic, WechatConf
 import config
 import time
 from wechat_sdk.exceptions import NeedLoginError
-
+import ConfigParser
 """
 Hint:
     连４中１表示连续４期或者４期以上的数字出现在落／杀／冷码后，然后出现一期不在，发送信号
@@ -30,26 +30,25 @@ logging.basicConfig(filename='./log/scc.log', level=logging.INFO)
 
 
 def init_wechat(token=None, cookies=None, login=False):
-    login_info = config.login_info
-    if token:
-        login_info["token"] = token
-    if cookies:
-        login_info["cookies"] = cookies
-    login_info["login"] = login
-    wechat = WechatExt(**login_info)
+    credit = ConfigParser.ConfigParser()
+    credit.read("./config.key")
+    appid = credit.get("credential", "appid")
+    appsecret = credit.get("credential", "AppSecret")
+
+    conf = WebchatConf(token="abcdef", appid=appid, appsecret=appsecret)
+    wechat = WechatBasic(conf=conf)
     return wechat
 
-def wechat_login():
-    login_info = config.login_info
-    wechat = WechatExt(**login_info)
-    return wechat
-
-def load_group_info(wechat):
-    groups = json.loads(wechat.get_group_list())
-    name2id = {}
-    for g in groups["groups"]:
-        name2id[g['name']] = g['id']
-    return name2id
+def load_users(wechat):
+    followers = wechat.get_followers()
+    users = {}
+    for user in followers["data"]:
+        uid = user["openid"]
+        # get user info
+        userinfo = wechat.get_user_info(uid)
+        tags = userinfo["tagid_list"]
+        users[uid] = {"tags": tags, "nickname": userinfo["nickname"]}
+    return users
 
 def send_message(wechat, message):
     #group_id = config.group_id
@@ -61,34 +60,23 @@ def send_message(wechat, message):
     while tried < max_retry and not done:
         tried += 1
         try:
-            group2id = load_group_info(wechat)
-            id2group = {v:k for k,v in group2id.items()}
-            group_ids = [group2id[g] for g in groups]
-            # get user list
-            for group_id in group_ids:
-                users = json.loads(wechat.get_user_list(groupid=group_id, pagesize=500))
-                for u in users["contacts"]:
-                    try:
-                        uid = u["id"]
-                        nick_name = u['nick_name']
-                        wechat.send_message(uid, content)
-                        logging.info("send message to user %s in group %s" % (nick_name, id2group[group_id]))
-                    except Exception as e:
-                        logging.info('Failed to send message to %s with error %s' % (nick_name, e))
-
+            users = load_users(wechat)
+            for uid, info in users.items():
+                try:
+                    for tag in info["tags"]:
+                        if tag in groups:
+                            # send the message to the user
+                            wechat.send_text_message(uid, content)
+                            logging.info('Success[%s]' % info["nickname"])
+                            break
+                except Exception as e:
+                    logging.warn('Faild to send message to user [%s] with error %s' % (uid, e))
             done = True
-        except NeedLoginError as nle:
-            logging.info("Need to ReLogin Wechat")
-            try:
-                wechat.login()
-            except Exception as e:
-                logging.info("Failed to relogin Wechat, try reiniate the Wechat")
-                wechat = init_wechat(login=True)
         except Exception as e:
             logging.info("Need to reinitiate Wechat")
             exc_type, exc_obj, exc_tb = sys.exc_info()
             err_msg = "Error: %s, in Line No %d" % (exc_type, exc_tb.tb_lineno)
-            logging.info("Failed to send the mail: [%s]" % err_msg)
+            logging.info("Failed to send the Messge: [%s]" % err_msg)
             time.sleep(1)
             wechat = init_wechat(login=True)
 
@@ -181,15 +169,19 @@ def initiate_codes(lottery_file):
 
     # compute the match information
     matched = {} # 只匹配落／杀／冷１２码
+    l3_matched = {}
     full_matched = {}# 匹配所有６码
     match_keys = ["luo_ma", "leng_1_ma", "leng_2_ma", "sha_ma"]
+    l3_match_keys = ["luo_ma", "leng_1_ma", "leng_2_ma", "sha_ma", "leng_3_ma"]
+    
     full_match_keys = match_keys + ["chuan_1", "chuan_2", "ge_ma"]
     for issue in issues[101:]:
         prev_id = lottery[issue]["previous"]
         numbers = lottery[issue]["numbers"]
         prev_code = codes[prev_id]
-        flag, full_flag = update_match(lottery[issue], prev_code)
+        flag, l3_flag, full_flag = update_match(lottery[issue], prev_code)
         matched[issue] = flag
+        l3_matched[issue] = l3_flag
         full_matched[issue] = full_flag
 
     # compute the l4z1hbz
@@ -197,7 +189,7 @@ def initiate_codes(lottery_file):
     for issue in issues[108:]:
         l4z1hbz_seq[issue] = compute_l4z1hbz(issue, matched, lottery)
 
-    return lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq
+    return lottery, lot_miss_info, codes, matched, l3_matched, full_matched, l4z1hbz_seq
 
 def compute_code(issue_id, dig, lottery, lot_miss_info):
     lot = lottery[issue_id]
@@ -206,6 +198,7 @@ def compute_code(issue_id, dig, lottery, lot_miss_info):
     miss = sorted(lot_miss_info[issue_id][dig].items(), key=lambda x:x[1], reverse=True)
     code["leng_1_ma"] = miss[0][0]
     code["leng_2_ma"] = miss[1][0]
+    code["leng_3_ma"] = miss[2][0]
     if dig == 3:
         code["sha_ma"] = (lot["numbers"][dig] - 1) % 10
     elif dig == 4:
@@ -230,18 +223,26 @@ def update_miss(lot, prev_miss_info):
 def update_match(lot, prev_code):
     numbers = lot["numbers"]
     flag = False
+    l3_flag = False
     full_flag = False
     match_keys = ["luo_ma", "leng_1_ma", "leng_2_ma", "sha_ma"]
+    l3_match_keys = ["luo_ma", "leng_1_ma", "leng_2_ma", "leng_3_ma", "sha_ma"]
+   
     full_match_keys = match_keys + ["chuan_1_ma", "chuan_2_ma", "ge_ma"]
     for dig in range(3, 5):
         codes = prev_code[dig]
         for key in match_keys:
             if codes[key] == numbers[dig]:
                 flag = True
+        
+        for key in l3_match_keys:
+            if codes[key] == numbers[dig]:
+                l3_flag = True
+
         for key in full_match_keys:
             if codes[key] == numbers[dig]:
                 full_flag = True
-    return flag, full_flag
+    return flag, l3_flag, full_flag
 
 
 def run(args):
@@ -252,7 +253,7 @@ def run(args):
     # load the current issue files
     issue_file = args.issue_file
     port = args.port
-    lottery, lot_miss_info, codes, matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file)
+    lottery, lot_miss_info, codes, matched, l3_matched, full_matched, l4z1hbz_seq = initiate_codes(issue_file)
     # record the information
     record_file = "./issues/record.csv"
     with open(record_file, 'w') as record_f:
@@ -295,8 +296,9 @@ def run(args):
 
             # update matched
             prev_code = codes[previous]
-            flag, full_flag = update_match(lottery[cur_id], prev_code)
+            flag, l3_flag, full_flag = update_match(lottery[cur_id], prev_code)
             matched[cur_id] = flag
+            l3_matched[cur_id] = l3_flag
             full_matched[cur_id] = full_flag
 
             # update l4z1hbz
@@ -306,22 +308,36 @@ def run(args):
 
             # generate the signal
             sorted_matched = sorted(matched.items(), key=lambda x:x[0], reverse=True)
+            l3_sorted_matched = sorted(l3_matched.items(), key=lambda x:x[0], reverse=True)
+
             sorted_full_matched = sorted(full_matched.items(), key=lambda x:x[0], reverse=True)
 
             signals = generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq)
+            l3_signals = generate_signals(l3_sorted_matched, sorted_full_matched, l4z1hbz_seq)
 
             # write the record
 
             with open(record_file, 'a+') as record_f:
                 nums = ''.join(map(str, lottery[cur_id]["numbers"]))
                 m4 = 'x' if matched[cur_id] else 'o'
+                l3_m4 = 'x' if matched[cur_id] else 'o'
                 m6 = 'x' if full_matched[cur_id] else 'o'
-                line = "%s\t%s\t%s\t%s\n" % (cur_id, nums, m4, m6)
+                line = "%s\t%s\t%s\t%s\t%s\n" % (cur_id, nums, m4, l3_m4, m6)
                 record_f.write(line)
 
             if len(signals):
                 try:
-                    messages = template(signals, lottery[cur_id], codes[cur_id])
+                    messages = template(signals, lottery[cur_id], codes[cur_id], l3=False, level="entry")
+                    for message in messages:
+                        logging.info("收到信号: %s at [%s]" % (message["content"], datetime.now(tz).isoformat()))
+                        send_message(wechat, message)
+                except Exception as e:
+                    err_msg = "Send Message Error %s at %s" % (e, datetime.now(tz).isoformat())
+                    logging.info(err_msg)
+
+            if len(l3_signals):
+                try:
+                    messages = template(l3_signals, lottery[cur_id], codes[cur_id], l3=True, level="middle")
                     for message in messages:
                         logging.info("收到信号: %s at [%s]" % (message["content"], datetime.now(tz).isoformat()))
                         send_message(wechat, message)
@@ -385,14 +401,14 @@ def generate_signals(sorted_matched, sorted_full_matched, l4z1hbz_seq):
     return signals
 
 
-def template(signals, cur_lot, cur_code):
+def template(signals, cur_lot, cur_code, l3=False, level="entry"):
     sig2name = {"l4z1": "连４中１", "1bz": "１不中", "2bz": "２不中",
             "l4z1h": "连４中１后", "3l4z1":"连续３次连４中１后",  "3l3z1": "连续３次连３中１后",
             "4day_l4z1hbz": "连续４天出现连４中１后不中", "q4z1h": "全４中１后"}
     # load signal group information
     signal_groups = json.load(open('./group_setting.json'))
 
-    code2name = {"luo_ma": "落码", "leng_1_ma": "冷１码", "leng_2_ma": "冷２码",
+    code2name = {"luo_ma": "落码", "leng_1_ma": "冷１码", "leng_2_ma": "冷２码", "leng_3_ma": "冷 3 码",
             "sha_ma": "杀码", "chuan_1_ma": "传１码", "chuan_2_ma":"传２码", "ge_ma": "隔码"}
 
     dig2name = {3: "十位", 4: "个位"}
@@ -412,13 +428,17 @@ def template(signals, cur_lot, cur_code):
         message += "码信息\n"
         #code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma", "ge_ma", "chuan_1_ma", "chuan_2_ma"]
         code_order = ["luo_ma", "sha_ma", "leng_1_ma", "leng_2_ma"]
+        if l3:
+            code_order.insert(4, "leng_3_ma")
         for i in range(3, 5):
             dig_name = dig2name[i]
             message += "%s: " % dig_name
             for code in code_order:
                 message += "%d " % (cur_code[i][code])
             message += "\n"
-        groups = signal_groups.get(sig_info[0])
+        
+        groups = signal_groups[level]get(sig_info[0])
+        
         messages.append({"content": message, "groups": groups})
     return messages
 
@@ -451,7 +471,7 @@ def signal_1buzhong_new(sorted_match):
 def signal_1buzhong(sorted_matched):
     """1不中后信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     value_str = ''.join(map(str, map(int, values)))
     rule = "10{1,}10"
     if re.match(rule, value_str):
@@ -461,7 +481,7 @@ def signal_1buzhong(sorted_matched):
 def signal_2buzhong(sorted_matched):
     """2不中后信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     value_str = ''.join(map(str, map(int, values)))
     rule = "110{1,}10"
     if re.match(rule, value_str):
@@ -471,7 +491,7 @@ def signal_2buzhong(sorted_matched):
 def signal_3buzhong(sorted_matched):
     """3不中后信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     value_str = ''.join(map(str, map(int, values)))
     rule = "1110{1,}10"
     if re.match(rule, value_str):
@@ -482,7 +502,7 @@ def signal_3buzhong(sorted_matched):
 def signal_l4z1_after(sorted_matched):
     """连４中１后具体信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rules = ["4-3", "5-1", "5-2", "5-3", "6-1", "6-3", "7-2", "7-3",
             "9-1", "9-2", "9-3", "10-2", "11-1", "11-2", "13-1", "13-2", "14-3"]
     for rule in rules:
@@ -497,7 +517,7 @@ def signal_l4z1_after(sorted_matched):
 def signal_l4z1_after_new(sorted_matched):
     """连4中1后信号新算法"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     sufix_rule = [1, 2, 3]
     for r in sufix_rule:
         sufix_pattern = [True] * (r - 1) + [False]
@@ -514,7 +534,7 @@ def signal_l4z1_after_new(sorted_matched):
 def signal_continue3_l4z1(sorted_matched):
     """连续3次连4中1信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rule = "(01{4,})(.*?)(01{4,})(.*?)(01{4,})"
     value_str = ''.join(map(str, map(int, values)))
     matched = re.match(rule, value_str)
@@ -532,7 +552,7 @@ def signal_continue3_l4z1(sorted_matched):
 def signal_continue3_l3z1(sorted_matched):
     """连续3次连3中1信号"""
     result = None
-    values = [s[1] for s in sorted_matched]
+    values = [s[1] for s in sorted_matched[-1:-50:-1]]
     rule = "(01{3}(?!1))(.*?)(01{3}(?!1))(.*?)(01{3}(?!1))"
     value_str = ''.join(map(str, map(int, values)))
     matched = re.match(rule, value_str)
@@ -582,8 +602,8 @@ def signal_4day_l4z1hbz(l4z1hbz_sequence):
 def signal_q4z1_after(sorted_matched, sorted_full_matched):
     """ 检测全４中１具体信号"""
     rules = ["1-1", "1-2", "1-3", "2-2", "3-3", "5-2"]
-    match_values = [s[1] for s in sorted_matched]
-    full_values = [s[1] for s in sorted_full_matched]
+    match_values = [s[1] for s in sorted_matched[-1:-50:-1]]
+    full_values = [s[1] for s in sorted_full_matched[-1:-50:-1]]
 
     for rule in rules:
         num1, num2 = map(int, rule.split("-"))
